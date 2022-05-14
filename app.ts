@@ -1,10 +1,11 @@
 import express, { Express, Request, Response } from 'express';
 import { AddressInfo } from "net";
+import cors from 'cors'
 
 import indexRoute from './routes/index.js';
 
 const app: Express = express();
-
+app.use(cors());
 
 app.use('/', indexRoute);
 
